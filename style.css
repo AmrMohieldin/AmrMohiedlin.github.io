@@ -1,0 +1,66 @@
+body {
+    background-repeat: no-repeat;
+    background-image: url(https://images.unsplash.com/photo-1564801720666-83b2d7a3de73?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1480&q=80);
+    color: rgb(172, 42, 42);
+    padding: 10px;
+    background-size: 100%;
+    font-family:cursive;}
+    #all-contents {
+   max-width: 800px;
+    margin: auto;
+   }
+   /* navigation menu */
+   nav {
+    background: rgb(239, 133, 41);
+    margin: 15;
+    padding: 10px;
+    border-radius: 8px;
+    height: 15%;
+    }
+   
+   
+   img {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%;
+   height: 30%;
+    border-radius: 8px}
+   h1 {
+    display: flex;
+    align-items: center;
+    color: white;
+    flex: 1;
+    margin: 0;
+    }
+   #nav-ul {
+    list-style-image: none;
+   }
+   .nav-li {
+    display: inline-block;
+    padding: 0 10px;
+   }
+   a {
+    text-decoration: none;
+    color: #065284;
+   }
+   /* main container area beneath menu */
+   .sidebar {
+    margin-right: 25px;
+    padding: 10px;
+   }
+   .sidebar-img {
+    width: 200px;
+   }
+   .content {
+    flex: 1;
+    padding: 15px;
+   }
+   /* portfolio styles */
+   #interests {
+    border: 4px silver ridge;
+    padding: 8px;
+   }
+   h2, h3 {
+    margin: 0px;
+   }
