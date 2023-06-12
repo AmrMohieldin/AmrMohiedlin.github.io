@@ -1,11 +1,10 @@
 body {
   margin: 0px;
-}
-
-canvas {
-  background-color: lightgray;
-}
+  background-repeat: no-repeat;
+  background-image: url(https://assetstorev1-prd-cdn.unity3d.com/package-screenshot/6f58e085-0b69-4951-9871-9ed1d89f13be_scaled.jpg);
+  background-size: 100%;}
 
 img {
   display: none;
-}
+  }
+

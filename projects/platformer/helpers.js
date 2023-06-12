@@ -368,14 +368,14 @@ function deathOfPlayer() {
   ctx.fillStyle = "black";
   ctx.font = "800% serif";
   ctx.fillText(
-    "You are dead",
+    "Get Better",
     canvas.width / 4,
     canvas.height / 6 + canvas.height / 5,
     (canvas.width / 16) * 14
   );
   ctx.font = "500% serif";
   ctx.fillText(
-    "Hit any key to restart",
+    "Hit A Key to Restart",
     canvas.width / 4,
     canvas.height / 6 + canvas.height / 3,
     (canvas.width / 16) * 14
@@ -411,7 +411,7 @@ function playerFrictionAndGravity() {
 
 function drawPlatforms() {
   for (var i = 0; i < platforms.length; i++) {
-    ctx.fillStyle = "grey";
+    ctx.fillStyle = "#693919";
     ctx.fillRect(
       platforms[i].x,
       platforms[i].y,
