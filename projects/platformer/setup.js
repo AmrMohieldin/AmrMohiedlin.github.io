@@ -92,10 +92,10 @@ let animationDetails = {};
 
 var collectableList = {
   database: { image: "images/collectables/database.png" },
-  diamond: { image: "https://o.remove.bg/downloads/15e7a6d6-21d3-4392-a48f-c81e26266674/download-removebg-preview.png" },
-  grace: { image: "https://o.remove.bg/downloads/58336da0-b3a9-4d4a-93b0-5ff5dcb45b28/download__2_-removebg-preview.png" },
+  diamond: { image: "images/collectables/diamond-head.png" },
+  grace: { image: "images/collectables/grace-head.png" },
   kennedi: { image: "images/collectables/kennedi-head.png" },
-  max: { image: "https://o.remove.bg/downloads/72865414-8d24-4a6a-b985-e1528c225fa2/download__1_-removebg-preview.png" },
+  max: { image: "images/collectables/max-head.png" },
 };
 
 
