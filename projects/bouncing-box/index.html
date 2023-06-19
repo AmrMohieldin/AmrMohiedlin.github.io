@@ -14,7 +14,7 @@
 			user-select: none;
 			display: block;
 			position: absolute;
-			top: 100px;
+			top: 0px;
 			left: 700px;  /* <--- Change me! */
 			margin: 0px;
     	background-repeat: no-repeat;
@@ -22,7 +22,7 @@
 		background-size: 100%;}
 	
 		.board{
-			height: 100vh;
+			height: 10vh;
 		background-repeat: no-repeat;
     	background-image: url(https://wallpaperaccess.com/full/17520.jpg);
 		background-size: 100%;}
@@ -46,7 +46,6 @@
 			var box = jQuery('.box');	// reference to the HTML .box element
 			var board = jQuery('.board');	// reference to the HTML .board element
 			var boardWidth = board.width();	// the maximum X-Coordinate of the screen
-
 			// Every 50 milliseconds, call the update Function (see below)
 			setInterval(update, 50);
 			
@@ -57,7 +56,8 @@
 			function moveBoxTo(newPositionX) {
 				box.css("left", newPositionX);}
 
-			
+			function moveBoxTo(newPositionY) {
+				box.css("top", newPositionY);}
 
 			// changes the text displayed on the Box
 			function changeBoxText(newText) {
@@ -89,13 +89,14 @@
 			 box.css("top", positionY);
 
 			 console.log(speedx)
+			 console.log(speedY)
 			 if (positionX > boardWidth) {speedx = -speedx;}
 
 			 if (positionX < 0) {speedx = -speedx;}
 			
-			 if (positionY > boardHeight) {speedY = -speedY;}
-
 			 if (positionY < 0) {speedY = -speedY;}
+
+			 if (positionY > boardHeight) {speedY = -speedY;}
 
  			                	};
 
