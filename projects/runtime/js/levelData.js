@@ -15,9 +15,14 @@ var makeLevelData = function (window) {
         number: 1,
         speed: -3,
         gameItems: [
-          { type: "sawblade", x: 400, y: groundY },
-          { type: "sawblade", x: 600, y: groundY },
-          { type: "sawblade", x: 900, y: groundY },
+          { type: "sawblade", x: 400, y: groundY - 50 },
+          { type: "sawblade", x: 600, y: groundY - 50  },
+          { type: "sawblade", x: 900, y: groundY - 50 },
+          { type: "enemy", x: 750, y: groundY - 50 },
+          { type: "reward", x: 500, y: groundY - 50 },
+          { type: " end-of-level marker", x:2000, y: groundY - 50},
+
+
         ],
       },
       {
@@ -25,9 +30,25 @@ var makeLevelData = function (window) {
         number: 2,
         speed: -3,
         gameItems: [
-          { type: "sawblade", x: 400, y: groundY },
-          { type: "sawblade", x: 600, y: groundY },
-          { type: "sawblade", x: 900, y: groundY },
+          { type: "sawblade", x: 300, y: groundY - 50 },
+          { type: "sawblade", x: 700, y: groundY - 50  },
+          { type: "sawblade", x: 1000, y: groundY - 50 },
+          { type: "enemy", x: 650, y: groundY - 50 },
+          { type: "reward", x: 700, y: groundY - 50 },
+          { type: " end-of-level marker", x:2000, y: groundY - 50},
+        ],
+      },
+      {
+        name: "Gojo Attacks",
+        number: 3,
+        speed: -2,
+        gameItems: [
+          { type: "sawblade", x: 400, y: groundY - 50 },
+          { type: "sawblade", x: 750, y: groundY - 50  },
+          { type: "sawblade", x: 950, y: groundY - 50 },
+          { type: "enemy", x: 850, y: groundY - 50 },
+          { type: "reward", x: 440, y: groundY - 50 },
+          { type: " end-of-level marker", x:2000, y: groundY - 50},
         ],
       },
     ];
