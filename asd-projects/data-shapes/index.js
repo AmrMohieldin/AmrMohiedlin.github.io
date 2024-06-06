@@ -47,16 +47,16 @@ $(document).ready(function () {
   // TODO 2: add a new property to all data shapes
   for (var i = 0; i < dataShapes.length; i++) {
     var currentShape = dataShapes[i]
-  }
+  
   if (currentShape.color === "red") {
-    Object.defineProperty(currentShape, "goodBehavior", {value:"bounce"});
+    currentShape.goodBehavior = "bounce";
   }
   else if (currentShape.color === "blue") {
-    Object.defineProperty(currentShape, "goodBehavior", {value:"blink"});
+    currentShape.goodBehavior = "blink";
   }
   else {
-    Object.defineProperty(currentShape, "goodBehavior", {value:"spin"});
-  }
+    currentShape.goodBehavior = "spin";
+  }}
 
   // TODO 3-a: add a function that handles the static display type
   function handleStatic(data) {
@@ -73,7 +73,7 @@ $(document).ready(function () {
 
   // TODO 5-a: add a function that handles the bad display type
   function handleBad(data, repeat){
-    repeat =+ 1
+    repeat = repeat + 1
     setBackgroundWithMixed(data, repeat)
     animationDetails.displayType = 3
   }
