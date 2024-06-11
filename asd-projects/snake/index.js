@@ -171,12 +171,12 @@ function hasCollidedWithApple() {
   
   HINT: Both the apple and the snake's head are aware of their own row and column
   */
-  if (snake.head.row === apple.row)
+  if (snake.head.row === apple.row){
     if(apple.column === snake.head.column) 
       {return true}
+  }
   
-  else {
-    return false};
+  
 }
 
 function handleAppleCollision() {
@@ -227,8 +227,8 @@ function hasCollidedWithSnake() {
 
     var snakeSquare = snake.body[j];
     var snakeHead = snake.body[0];
-    var currentRow = SnakeSquare.row;
-    var currentColumn = SnakeSquare.column;
+    var currentRow = snakeSquare.row;
+    var currentColumn = snakeSquare.column;
     
     if (snakeHead.row === currentRow){
       if (snakeHead.column === currentColumn){
@@ -350,13 +350,27 @@ function getRandomAvailablePosition() {
     randomPosition.column = Math.floor(Math.random() * COLUMNS);
     randomPosition.row = Math.floor(Math.random() * ROWS);
     spaceIsAvailable = true;
+  }
+    
 
     /*
     TODO 13: After generating the random position determine if that position is
     not occupied by a snakeSquare in the snake's body. If it is then set 
     spaceIsAvailable to false so that a new position is generated.
     */
-  }
+  
+    for (var j = 0; j > snake.body.length; j++){ 
+      var snakeSquare = snake.body[j];
+      var currentRow = snakeSquare.row;
+      var currentColumn = snakeSquare.column;
+
+      if (apple.column === currentColumn){
+        if (apple.row === currentRow){
+          spaceIsAvailable = false;
+        }
+      } 
+
+    }
 
   return randomPosition;
 }
