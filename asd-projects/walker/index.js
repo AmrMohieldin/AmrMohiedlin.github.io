@@ -12,11 +12,26 @@ function runProgram(){
   var FRAMES_PER_SECOND_INTERVAL = 1000 / FRAME_RATE;
   
   // Game Item Objects
+  var KEY = {
+    ENTER: 13,
+    LEFT: 37,
+    UP: 38,
+    RIGHT: 39,
+    DOWN: 40,
+  };
 
+  var walker = {
+    posX: 0,
+    posY: 0,
+    speedX: 0,
+    speedY: 0,
+    width: 50,
+  }
 
   // one-time setup
   var interval = setInterval(newFrame, FRAMES_PER_SECOND_INTERVAL);   // execute newFrame every 0.0166 seconds (60 Frames per second)
-  $(document).on('eventType', handleEvent);                           // change 'eventType' to the type of event you want to handle
+  $(document).on('keydown', handleKeyDown);                           
+  $(document).on('keyup', handleKeyUp);
 
   ////////////////////////////////////////////////////////////////////////////////
   ///////////////////////// CORE LOGIC ///////////////////////////////////////////
@@ -27,15 +42,33 @@ function runProgram(){
   by calling this function and executing the code inside.
   */
   function newFrame() {
-    
-
+    repositionGameItem()
+    wallCollision()
+    redrawGameItem()
   }
   
   /* 
   Called in response to events.
   */
-  function handleEvent(event) {
+  function handleKeyDown(event) {
+    if (event.which === KEY.LEFT) {
+      walker.speedX = -5;
+    }
+    else if (event.which === KEY.UP) {
+      walker.speedY = -5;
+    }
+    else if (event.which === KEY.DOWN) {
+      walker.speedY = 5;
+    }
+    else if (event.which === KEY.RIGHT) {
+      walker.speedX = 5;
+    }
+    
+  }
 
+  function handleKeyUp(event) {
+    walker.speedX = 0;
+    walker.speedY = 0;
   }
 
   ////////////////////////////////////////////////////////////////////////////////
@@ -49,6 +82,27 @@ function runProgram(){
 
     // turn off event handlers
     $(document).off();
+  }
+
+  function repositionGameItem() {
+    walker.posX += walker.speedX;  // update the position of the box along the x-axis
+    walker.posY += walker.speedY;  // update the position of the box along the y-axis
+
+  }
+
+  function redrawGameItem() {
+    $("#walker").css("left", walker.posX); // draw the box in the new location, positionX pixels away from the "left"
+    $("#walker").css("top", walker.posY); // draw the box in the new location, positionY pixels away from the "top"
+  }
+
+ 
+  function wallCollision() {
+    if (walker.posX > $("#board").width() - walker.width || walker.posX < 0){
+      walker.posX -= walker.speedX
+    }
+    if (walker.posY > $("#board").height() - walker.width || walker.posY < 0){
+      walker.posY -= walker.speedY
+    }
   }
   
 }
