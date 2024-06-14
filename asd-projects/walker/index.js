@@ -51,7 +51,7 @@ function runProgram(){
 
 
   function changeColor(){
-    colr = ""
+    colr = "#"
     for (var i = 0; i < 6; i++){
       var hi = getRandomIntInc(0, 16)
       colr += colors[hi]
@@ -59,7 +59,7 @@ function runProgram(){
     $("#walker1").css("background-color", colr); }
   
   function changeColor1(){
-    colr1 = ""
+    colr1 = "#"
     for (let i = 0; i < 6; i++){
       var hi1 = getRandomIntInc(0, 16)
       colr1 += colors[hi1]
@@ -74,8 +74,8 @@ function runProgram(){
   var interval = setInterval(newFrame, FRAMES_PER_SECOND_INTERVAL);   // execute newFrame every 0.0166 seconds (60 Frames per second)
   $(document).on('keydown', handleKeyDown);                           
   $(document).on('keyup', handleKeyUp);
-  walker1.on('click', changeColor);
-  walker.on('click', changeColor1);
+  $("#walker1").on('click', changeColor);
+  $("#walker").on('click', changeColor1);
 
   ////////////////////////////////////////////////////////////////////////////////
   ///////////////////////// CORE LOGIC ///////////////////////////////////////////
