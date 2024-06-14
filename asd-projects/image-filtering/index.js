@@ -68,7 +68,7 @@ function applyFilterNoBackground(filterFunction){
 var hi1;
 function keepInBounds(no1){
   hi1 = no1 > 255 ? 255: no1 < 0 ? 0: no1
-  return hi
+  return hi1
 }
 
 // TODO 3: Create reddify function
