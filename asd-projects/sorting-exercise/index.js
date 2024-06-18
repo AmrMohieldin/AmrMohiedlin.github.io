@@ -43,8 +43,9 @@ async function bubbleSort(arr){
     var hi = arr[i]
     arr[i] = arr[j]
     arr[j] = hi
-    return arr
+    drawSwap(arr, i, j)
     }
+   
 
 ///////////////////////////////////////////////////////////////////////
 /////////////////////// YOUR WORK GOES ABOVE HERE /////////////////////
