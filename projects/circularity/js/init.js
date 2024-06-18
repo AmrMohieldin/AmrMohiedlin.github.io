@@ -32,7 +32,7 @@ var init = function (window) {
         // TODO 3 / 7 : Call the drawCircle() function 
         
         var loopsCompleted = 0;
-        while (loopsCompleted <= 10000) {
+        while (loopsCompleted <= 10) {
           drawCircle();
             loopsCompleted++;
         }
