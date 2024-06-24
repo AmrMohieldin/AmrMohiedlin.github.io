@@ -13,7 +13,8 @@ The CSS ids you will work with are:
 /////////////////////// YOUR WORK GOES BELOW HERE /////////////////////
 ///////////////////////////////////////////////////////////////////////
 
-// TODO 2: Implement bubbleSort
+// TODO 2: Implement bubbleSort 
+// a function that sorts the bubbles from least to greatest
 async function bubbleSort(arr){
     for (let i = 0; i < arr.length; i++){
         for (let j = arr.length - 1; j > i ; j--){
@@ -25,16 +26,42 @@ async function bubbleSort(arr){
         }
 
     }
-    return arr;
+    
 }
 
 
 
 // TODO 3: Implement quickSort
+// Helps with the sorting
+async function quickSort(arr, left, right){
+if (right - left > 0){
+    var index = await partition(arr, left, right);
 
+    if (left < index - 1){
+        await quickSort(arr, left, index - 1)
+    }
+    if (index < right){
+        await quickSort(arr, index, right)
+    }
+}
+}
 
 // TODOs 4 & 5: Implement partition
-
+// Helper function
+async function partition(array, left, right){
+ var pivot = array[Math.floor((right + left)/2)].value;
+ while (left < right){
+    while (array[left].value < pivot) {left++}
+    while (array[right].value > pivot) {right--}
+    if (left <= right){
+        swap(array, left, right)
+        updateCounter(quickCounter)
+        await sleep();
+    }
+ }
+ 
+ return left + 1;
+}
 
 // TODO 1: Implement swap
  // function to swap 2 parts of arrays
