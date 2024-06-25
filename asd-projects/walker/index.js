@@ -148,8 +148,6 @@ function runProgram(){
     walker.posY += walker.speedY;  // update the position of the box along the y-axis
     walker1.posX += walker1.speedX;  // update the position of the box along the x-axis
     walker1.posY += walker1.speedY;  // update the position of the box along the y-axis
-
-
   }
 
   function redrawGameItem() {
