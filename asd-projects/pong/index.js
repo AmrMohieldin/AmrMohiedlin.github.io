@@ -124,10 +124,14 @@ function runProgram(){
         score2 += 1
         $("#score2").text("Score: " + score2)}
     
-      if (ball.x - 10 < 20 && paddle1.posY <= ball.y && ball.y >= paddle1.posY + 40 || ball.x + 10 >= paddle2.posX && paddle2.posY <= ball.y && ball.y >= paddle2.posY + 40) {
+      if (ball.x - 10 < paddle1.posX && ball.y > paddle1.posY && ball.y < paddle1.posY + 80) {
            ball.speedX *= -1
            ball.speedY *= -1
-      }}
+      }
+      if (ball.x + 10 > paddle2.posX && ball.y > paddle2.posY && ball.y < paddle2.posY + 80) {
+        ball.speedX *= -1
+        ball.speedY *= -1
+   }}
       
     
   
