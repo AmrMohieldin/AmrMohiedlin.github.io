@@ -76,6 +76,13 @@ body {
 
 }
 
+#winner {
+  color: purple;
+  position: absolute;
+  left: 600px;
+  top: 600px;
+  font-size: 45px;
+}
 
 
 
